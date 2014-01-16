@@ -1,7 +1,7 @@
 from mongoengine import *
 import datetime
 
-connect('tumblelog')
+connect('mdb')
 
 
 class Page(Document):

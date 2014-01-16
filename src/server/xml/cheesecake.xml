@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="_assets/recipe.xsl"?>
+<recipe lang="en-uk">
+    <title><![CDATA[cheesecake]]></title>
+    <description><![CDATA[a cake]]></description>
+    <source><![CDATA[personnal]]></source>
+    <cuisine>
+        <!-- CUISINE -->
+        <style></style>
+        <region></region>
+        <approach></approach>
+    </cuisine>
+    <tags>
+        <!-- TAG -->
+        <tag></tag>
+    </tags>
+    <directions>
+        <!-- STEPS -->
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+    </directions>
+    <ingredients>
+        <serves>cold</serves>
+        <!-- INGREDIENT -->
+
+    </ingredients>
+</recipe>

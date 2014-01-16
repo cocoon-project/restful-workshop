@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="_assets/recipe.xsl"?>
+<recipe lang="en-uk">
+    <title><![CDATA[fondue]]></title>
+    <description><![CDATA[une fondue]]></description>
+    <source><![CDATA[moi]]></source>
+    <cuisine>
+        <!-- CUISINE -->
+        <style></style>
+        <region></region>
+        <approach></approach>
+    </cuisine>
+    <tags>
+        <!-- TAG -->
+        <tag></tag>
+    </tags>
+    <directions>
+        <!-- STEPS -->
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+        <step><![CDATA[]]></step>
+    </directions>
+    <ingredients>
+        <serves>ah oui</serves>
+        <!-- INGREDIENT -->
+		<ingredient>
+		    <quantity>200</quantity>
+		    <measurement>g</measurement>
+		    <name>fromage</name>
+		    <preparation></preparation>
+		</ingredient>
+
+
+    </ingredients>
+</recipe>

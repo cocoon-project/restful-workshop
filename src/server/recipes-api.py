@@ -21,14 +21,7 @@ def recipe_show( name="" ):
         return static_file( name, pth_xml  )
     else:
         return { "success" : False, "error" : "show called without a filename" }
-    
-@route('/recipes/_assets/<name>', method='GET')
-def recipe_show( name="" ):
-    if "" != name:
-        return static_file( name, pth_xml + "_assets/" )
-    else:
-        return { "success" : False, "error" : "show called without a filename" }
-    
+
 @route('/recipes/<name>', method='DELETE' )
 def recipe_delete( name="" ):
     if "" != name:
@@ -48,5 +41,13 @@ def recipe_save( name="" ):
         return { "success" : True, "path" : name }
     else:
         return { "success" : False, "error" : "save called without a filename or content" }
+
+
+@route('/recipes/_assets/<name>', method='GET')
+def recipe_show( name="" ):
+    if "" != name:
+        return static_file( name, pth_xml + "_assets/" )
+    else:
+        return { "success" : False, "error" : "show called without a filename" }
 
 run(host='localhost', port=8088, debug=True)

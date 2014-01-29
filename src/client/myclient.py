@@ -1,6 +1,6 @@
 """
 
-    client to acces recipes-apy.py
+    client to access recipes-apy.py
 
 
 """

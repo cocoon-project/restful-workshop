@@ -10,7 +10,7 @@
 
 """
 
-from bottle import route, run
+from bottle import route, run , response
 from tools import platform_kinds,platform_information,get_environ_variables
 from tools import to_json
 
@@ -22,6 +22,7 @@ def hello():
 
 @route('/platform')
 def get_platform_kinds():
+    response.content_type = "application/json"
     return to_json(platform_kinds())
 
 @route('/platform/machine')
@@ -36,6 +37,8 @@ def platform_machine():
 def platform_element(kind):
     """
         modifier la fonction pour retourner l'info designée par kind (machine,node)
+
+        la valeur retournée doit etre au format json
 
     """
     return kind

@@ -20,99 +20,99 @@ créer un service réutilisable
 
 retrieve the order
 
-	RPC
-		quelle est la methode pour retrouver un order ???
-		find_order( order_id = 123)
+RPC
+	quelle est la methode pour retrouver un order ???
+	find_order( order_id = 123)
 
-		=>
-			order= 123 
-			client=me
-			articles = []
-			status=created
+	=>
+		order= 123 
+		client=me
+		articles = []
+		status=created
 
-	REST
-		GET http://mysite/order/123
-			order = http://mysite/order/123
-			client = http://mysite/client/me
-			articles=[
-				http://mysite/article/1
-				http://mysite/artice/2
-			]
-			status = http://mysite/oder/123/status
+REST
+	GET http://mysite/order/123
+		order = http://mysite/order/123
+		client = http://mysite/client/me
+		articles=[
+			http://mysite/article/1
+			http://mysite/artice/2
+		]
+		status = http://mysite/oder/123/status
 			
 
 Retrieve the client
 
-		RPC
-			quel est le service pour retouver les infos sur le client : "me" ?
-			find_client(  id = me )
+RPC
+	quel est le service pour retouver les infos sur le client : "me" ?
+	find_client(  id = me )
 
-		REST:
-			GET http://mysite/client
+REST:
+	GET http://mysite/client
 
 
 
 modifier le status d un order pour le passer a "processing"
 
-		RPC
-			quel le service pour modifier le status ????
-			modify_status( order = 123 , new_status = processing)
+RPC
+	quel le service pour modifier le status ????
+	modify_status( order = 123 , new_status = processing)
 
-		REST
-			PUT http://mysite/order/123/status
-				value = processing
+REST
+	PUT http://mysite/order/123/status
+		value = processing
 
 
 
 interoger les 'order' pour recuperer les ordres dont le status est created
 
-	RPC
-		quel est le nom du service ?
-		find_order_with_status( status = created )
+RPC
+	quel est le nom du service ?
+	find_order_with_status( status = created )
 
-		==> liste
+	==> liste
 
-	REST
-		GET /order ? status = created
+REST
+	GET /order ? status = created
 
-		=>
-			[ 
-				http://mysite/order/456
-				http://mysite/order/457
-			]
+	=>
+		[ 
+			http://mysite/order/456
+			http://mysite/order/457
+		]
 
 
 
 retrouver les orders d'un client
 
-		RPC
-			quel est la methode ?
-			find_user_orders( client = me)
+RPC
+	quel est la methode ?
+	find_user_orders( client = me)
 
-			=> liste des order _id
+	=> liste des order _id
 
 
-		REST
-			GET http://mysite/user/me
+REST
+	GET http://mysite/user/me
 
-			==>
-				info = http:/mysite/user/123/infos
-				orders = [ 
-					http://mysite/order/123
-					http://mysite/order/456
-				]
+	==>
+		info = http:/mysite/user/123/infos
+		orders = [ 
+			http://mysite/order/123
+			http://mysite/order/456
+		]
 
 
 supprimer un order
 
-		RPC
-			methode ?
+RPC
+	methode ?
 
-			delete_order( order_id = 123)
+	delete_order( order_id = 123)
 
-		REST
+REST
 
-			DELETE http://mysite/order/123
+	DELETE http://mysite/order/123
 
 
 ##############################

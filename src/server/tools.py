@@ -1,6 +1,6 @@
 """
 
-    tools for iterfacing with system
+    tools for interfacing with system
 
 
 """
@@ -10,6 +10,7 @@ import sys
 import platform
 import os
 import json
+import psutil
 from pprint import PrettyPrinter
 
 
@@ -23,6 +24,8 @@ def get_environ_variables():
     return os.environ.data
 
 
+
+# tools for platform info
 
 kinds = ['machine','node','platform','processor','python_build','python_compiler','python_version',
          'python_implementation','release','system','version','uname']
@@ -48,6 +51,25 @@ def platform_information(kind='all'):
     else:
         return None
 
+# tools for psutil
+psutil_commands = ["cpu_times_percent","virtual_memory","swap_memory","disk_partitions","disk_usage","disk_io_counters",
+                   "net_io_counters","get_boot_time","get_users"]
+
+def psutil_information(command,arg=None):
+    """
+
+
+    """
+    if command == "disk_usage" :
+        if not arg:
+            arg = '/'
+        return psutil.disk_usage(arg)
+    elif command == "disk_io_counters":
+        if not arg:
+            arg=False
+        return psutil.disk_io_counters(arg)
+    else:
+        return getattr(psutil,command)()
 
 
 # to json conversion
@@ -104,6 +126,10 @@ if __name__ == "__main__":
 
         info = platform_information()
         PrettyPrinter().pprint(info)
+
+        for command in psutil_commands:
+            print psutil_information(command)
+            continue
 
 
 

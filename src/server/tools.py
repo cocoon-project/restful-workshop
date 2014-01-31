@@ -57,7 +57,7 @@ psutil_commands = ["cpu_times_percent","virtual_memory","swap_memory","disk_part
 
 def psutil_information(command,arg=None):
     """
-
+        psutil information
 
     """
     if command == "disk_usage" :

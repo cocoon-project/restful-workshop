@@ -11,14 +11,14 @@ import requests
 
 base = "http://localhost:8088/"
 
-
+###
 # create a client session
 client = requests.Session()
 
 # dont use proxy
 client.trust_env = False
 
-
+###
 # get recipes
 r = client.get( base + 'recipes/')
 
@@ -37,7 +37,7 @@ print recipes
 # get the first recipe
 first_recipe = recipes['paths'][0]
 
-
+###
 # fetch the first recipe
 r = client.get( base + 'recipes/' + first_recipe )
 
